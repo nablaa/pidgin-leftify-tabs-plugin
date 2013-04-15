@@ -13,6 +13,7 @@ static void move_conversation_tab_to_leftmost_pos(PurpleConversation *conv) {
     gint position = 0; // Leftmost position
     PidginConversation *gtkconv;
     PidginWindow *win;
+    gint current_page;
 
     if (!conv) {
         return;
@@ -28,8 +29,16 @@ static void move_conversation_tab_to_leftmost_pos(PurpleConversation *conv) {
         return;
     }
 
+    // Move the current tab to the leftmost position and the tab with activity
+    // next to it.
+    current_page = gtk_notebook_get_current_page(GTK_NOTEBOOK(win->notebook));
     gtk_notebook_reorder_child(GTK_NOTEBOOK(win->notebook),
-                               gtkconv->tab_cont, position);
+                               gtk_notebook_get_nth_page(GTK_NOTEBOOK(win->notebook),
+                                                         current_page),
+                               position);
+
+    gtk_notebook_reorder_child(GTK_NOTEBOOK(win->notebook),
+                               gtkconv->tab_cont, position + 1);
 }
 
 static void
