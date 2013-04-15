@@ -9,7 +9,7 @@
 #include "gtkconv.h"
 
 
-static void move_conversation_tab_to_leftmost_pos(PurpleConversation *conv) {
+static void move_conversation_tabs_to_left(PurpleConversation *conv) {
     gint position = 0; // Leftmost position
     PidginConversation *gtkconv;
     PidginWindow *win;
@@ -44,24 +44,24 @@ static void move_conversation_tab_to_leftmost_pos(PurpleConversation *conv) {
 static void
 received_im_msg_cb(PurpleAccount *account, char *sender, char *message,
                    PurpleConversation *conv, PurpleMessageFlags flags) {
-    move_conversation_tab_to_leftmost_pos(conv);
+    move_conversation_tabs_to_left(conv);
 }
 
 static void
 conversation_created_cb(PurpleConversation *conv) {
-    move_conversation_tab_to_leftmost_pos(conv);
+    move_conversation_tabs_to_left(conv);
 }
 
 static void
 received_chat_msg_cb(PurpleAccount *account, char *sender, char *message,
                      PurpleConversation *conv, PurpleMessageFlags flags) {
-    move_conversation_tab_to_leftmost_pos(conv);
+    move_conversation_tabs_to_left(conv);
 }
 
 static void
 got_attention_cb(PurpleAccount *account, const char *who,
                  PurpleConversation *conv, guint type) {
-    move_conversation_tab_to_leftmost_pos(conv);
+    move_conversation_tabs_to_left(conv);
 }
 
 static gboolean
