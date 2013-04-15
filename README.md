@@ -1,8 +1,13 @@
 # Pidgin leftify tabs plugin
 
-This plugin moves a conversation tab to the leftmost position whenever
-it receives a new message. New conversations are also spawned to the leftmost
-position in tab row.
+When you have many conversation tabs open, not all of them can fit at the same
+time to the tab bar. This is a problem, because it is easy to miss new messages
+in tabs that are not visible. This plugin tries to solve this problem by moving
+tabs to left whenever a new message arrives.
+
+When a new message is received, the currently active tab is moved to the
+leftmost position in the tab bar and the tab receiving the message is moved
+next to it.
 
 ## Compiling plugin
 
