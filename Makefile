@@ -4,7 +4,7 @@ CFLAGS += -O2 -Werror -Wall -Wextra -Wno-missing-braces \
           -Wswitch-enum -Wcast-align -Wpointer-arith -Wbad-function-cast \
           -Wstrict-overflow=5 -Winline -Wundef -Wnested-externs -Wcast-qual \
           -Wshadow -Wunreachable-code -Wlogical-op -Wfloat-equal \
-          -Wstrict-aliasing=2 -Wredundant-decls -pedantic \
+          -Wstrict-aliasing=2 -Wredundant-decls \
           -Wold-style-definition -Wno-unused-parameter -std=c99
 
 GTK_CFLAGS = `pkg-config --cflags glib-2.0`
