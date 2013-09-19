@@ -1,5 +1,11 @@
 CC = gcc
-CFLAGS += -O2 -Wall
+CFLAGS += -O2 -Werror -Wall -Wextra -Wno-missing-braces \
+          -Wno-missing-field-initializers -Wformat=2 -Wswitch-default \
+          -Wswitch-enum -Wcast-align -Wpointer-arith -Wbad-function-cast \
+          -Wstrict-overflow=5 -Winline -Wundef -Wnested-externs -Wcast-qual \
+          -Wshadow -Wunreachable-code -Wlogical-op -Wfloat-equal \
+          -Wstrict-aliasing=2 -Wredundant-decls -pedantic \
+          -Wold-style-definition -Wno-unused-parameter -std=c99
 
 GTK_CFLAGS = `pkg-config --cflags glib-2.0`
 GTK_CFLAGS += `pkg-config --cflags gtk+-2.0`
