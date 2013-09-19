@@ -1,13 +1,13 @@
 # Pidgin leftify tabs plugin
 
-When you have many conversation tabs open, not all of them can fit at the same
-time to the tab bar. This is a problem, because it is easy to miss new messages
-in tabs that are not visible. This plugin tries to solve this problem by moving
-tabs to left whenever a new message arrives.
+When you have many conversation tabs open, not all of them can be visible at
+the same time in the tab bar. This is a problem, because it is easy to miss new
+messages that arrive to tabs that are not visible. This plugin tries to solve
+this problem by moving a tab to left whenever a new message arrives to it.
 
-When a new message is received, the currently active tab is moved to the
+When a new message is received, the currently open tab is moved to the
 leftmost position in the tab bar and the tab receiving the message is moved
-next to it.
+immediately next to it.
 
 ## Compiling and installing the plugin
 
