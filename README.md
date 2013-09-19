@@ -9,28 +9,19 @@ When a new message is received, the currently active tab is moved to the
 leftmost position in the tab bar and the tab receiving the message is moved
 next to it.
 
-## Compiling plugin
+## Compiling and installing the plugin
 
-Install pre-requisite packages. In Ubuntu:
+Install pre-requisite `pidgin-devel` and `libpurple-devel` packages. On Ubuntu:
 
 	sudo apt-get build-dep pidgin
 	sudo apt-get install pidgin-dev libpurple-dev
 
-Download Pidgin source and compile it:
+Compiling the plugin
 
-	./configure
 	make
 
-Move `leftify_tabs.c` to `pidgin/plugins` inside Pidgin source directory and
-make the plugin there:
+Installing the plugin to `~/.purple/plugins/`
 
-	cd pidgin/plugins
-	make leftify_tabs.so
+	make install
 
-## Installing plugin
-
-Copy compiled plugin file to your own Pidgin plugin directory:
-
-	cp leftify_tabs.so ~/.purple/plugins
-
-Enable plugin from Pidgin plugins list.
+Enable plugin *Leftify Tabs* from Pidgin plugins list.
