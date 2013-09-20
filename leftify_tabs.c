@@ -8,6 +8,8 @@
 #include "gtkplugin.h"
 #include "gtkconv.h"
 
+#define PLUGIN_VERSION "0.1-dev"
+
 
 static void move_conversation_tabs_to_left(PurpleConversation *conv) {
     gint position = 0; // Leftmost position
@@ -100,7 +102,7 @@ static PurplePluginInfo info = {
 
     "gtk-nablaa-leftify_tabs",
     "Leftify tabs",
-    "0.1",
+    PLUGIN_VERSION,
 
     "Moves tab to leftmost position when messages arrive",
     "A tab is moved to the leftmost position whenever a message arrives",
