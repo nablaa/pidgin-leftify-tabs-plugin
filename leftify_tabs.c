@@ -8,7 +8,7 @@
 #include "gtkplugin.h"
 #include "gtkconv.h"
 
-#define PLUGIN_VERSION "0.1-dev"
+#define PLUGIN_VERSION "0.1.1"
 
 
 static void move_conversation_tabs_to_left(PurpleConversation *conv) {
